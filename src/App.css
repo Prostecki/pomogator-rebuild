@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply h-full;
+}
+
+.app {
+  @apply w-full;
+}
+
+.present {
+  @apply h-screen bg-stone-100 flex flex-col items-center justify-center gap-10;
+  background-image: url("/src/assets/img/bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-button {
+  @apply text-lg border-2 border-black py-2 px-5 rounded-md shadow-md bg-orange-500 text-black duration-200 drop-shadow-md;
+}
+
+.contact-button:hover {
+  @apply bg-orange-600 text-white;
+}
+
+#contact-number {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+#contact-number::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: rgb(59, 59, 255);
+  transition: width 0.6s ease;
+}
+
+#contact-number:hover::after {
+  width: 100%;
+}
