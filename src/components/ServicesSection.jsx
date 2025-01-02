@@ -1,8 +1,9 @@
 import { MdDone } from "react-icons/md";
+import React from "react";
 
-export default function ServicesSection() {
+const ServicesSection = React.forwardRef((props, ref) => {
   return (
-    <section className="flex items-center justify-center h-3/4 mt-10">
+    <section ref={ref} className="flex items-center justify-center h-3/4 mt-10">
       <div className="w-full">
         <img
           className="w-[50rem]"
@@ -59,4 +60,6 @@ export default function ServicesSection() {
       </div>
     </section>
   );
-}
+});
+
+export default ServicesSection;
